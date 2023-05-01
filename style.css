@@ -1,0 +1,99 @@
+body {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyDErCMCsWVRMdcntxCN1AVN9pj-J9ywKAmQ&usqp=CAU");
+  background-size : cover;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color:black;
+}
+
+a {
+  color: #0074D9;
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Header styles */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color:white;
+  border-bottom: 1px solid #EEE;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin-left: 1rem;
+}
+
+nav a {
+  font-weight: bold;
+}
+
+/* Main styles */
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+section {
+  margin-top: 2rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+ul {
+  margin-left: 2rem;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+ul li a {
+  color: #555;
+}
+
+/* Footer styles */
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #F8F8F8;
+  border-top: 1px solid #EEE;
+}
+
+/* Responsive styles */
+
+@media screen and (max-width: 600px) {
+  nav {
+    display: none;
+  }
+  
+  header img {
+    max-width: 200px;
+  }
+  
+  nav li {
+    margin: 0 0.5rem;
+  }
+}
