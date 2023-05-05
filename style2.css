@@ -1,42 +1,129 @@
-/* Apply 3D effects to the header */
-header {
-  background-color: #333;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-  transform: perspective(500px) rotateX(15deg);
+/* Define some global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
-/* Apply 3D effects to the main section */
-main {
-  background-color: #eee;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-  transform: perspective(500px) rotateX(-15deg);
+/* Style the header */
+header {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+/* Add a 3D effect to the header */
+header:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  bottom: -10px;
+  left: -10px;
+  right: -10px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  transform: skewY(-3deg);
+  z-index: -1;
 }
 
 /* Style the navigation links */
 nav ul {
+  display: flex;
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
-nav li {
-  display: inline-block;
-  margin: 0 10px;
+nav ul li {
+  margin-right: 1rem;
 }
 
-nav a {
+nav ul li a {
   color: #fff;
   text-decoration: none;
-  text-transform: uppercase;
-  font-size: 16px;
   font-weight: bold;
-  letter-spacing: 1px;
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-nav a:hover {
-  background-color: #fff;
-  color: #333;
+nav ul li a:hover {
+  transform: translateY(-3px);
+}
+
+/* Style the main content */
+main {
+  padding: 2rem;
+}
+
+/* Add a 3D effect to the main content */
+main:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  bottom: -10px;
+  left: -10px;
+  right: -10px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  transform: skewY(-3deg);
+  z-index: -1;
+}
+
+/* Style the sections */
+section {
+  margin-bottom: 2rem;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+section p {
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+section ul {
+  list-style: none;
+  margin-left: 1rem;
+}
+
+section ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Style the footer */
+footer {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Add a 3D effect to the footer */
+footer:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  bottom: -10px;
+  left: -10px;
+  right: -10px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.1)
+  );
+  transform: skewY(-3deg);
+  z-index: -1;
 }
